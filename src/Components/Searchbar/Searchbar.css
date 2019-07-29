@@ -1,0 +1,13 @@
+.searchbar {
+    background: #fff;
+    width: 75%;
+    padding: 0.75rem 0.625rem;
+    border-radius: 0.3125rem;
+    display: flex;
+}
+
+.searchbar input[type="text"] {
+    border: none;
+    width: 100%;
+    outline: none;
+}
