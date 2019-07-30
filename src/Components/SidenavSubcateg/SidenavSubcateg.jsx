@@ -1,7 +1,7 @@
 import React from 'react';
-import './Sidenav_subcateg.css';
+import './SidenavSubcateg.css';
 
-const Sidenav_subcateg = () => {
+const SidenavSubcateg = () => {
 	return (
 		<>
 			<div className="subcateg">name1</div>
@@ -14,4 +14,4 @@ const Sidenav_subcateg = () => {
 	)	
 }
 
-export default Sidenav_subcateg;
+export default SidenavSubcateg;

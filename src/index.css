@@ -10,6 +10,16 @@
     color: #000;
 }
 
+hr { /* work in progress */
+    border-style: inset;
+    border-width: 0.0625rem;
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
