@@ -82,6 +82,6 @@ code {
 .font-b {
   color: #6364d8;
 }
-.font-g, .subcateg, .sort {
+.font-g, .subcateg, .sort, .description li {
   color: #8f8f8f;
 }
