@@ -1,0 +1,15 @@
+.contentnav {
+	display: flex;
+}
+
+.content-back {
+	margin-left: 0.625rem;
+	padding-left: 0.5rem;
+	cursor: pointer;
+}
+
+.content-forw {
+	margin-left: 0.625rem;
+	padding-left: 0.5rem;
+	cursor: pointer;
+}

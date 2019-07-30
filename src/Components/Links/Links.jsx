@@ -3,7 +3,7 @@ import './Links.css';
 
 const Links = () => {
   return (
-    <div class="links">
+    <div className="links">
       <ul>
         <li><a href="#">Shipping</a></li>
         <li><a href="#">Blog</a></li>

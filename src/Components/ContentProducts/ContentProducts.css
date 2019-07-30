@@ -1,0 +1,24 @@
+.flex-content {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 15rem;
+	width: 20%;
+	border: solid 0.0625rem #000;
+	justify-content: flex-start;
+	margin: 1.25rem;
+}
+
+.item-img {
+	min-width: 80px;
+	height: 80%;
+	z-index: -1;
+}
