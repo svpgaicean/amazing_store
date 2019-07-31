@@ -7,7 +7,7 @@ const Info = () => {
     <>
       <div>
         <i className="fas fa-map-marker-alt icon"></i>
-        <span>My city: <a href="#" className="font-b">Dummy Name</a></span>
+        <span>My city: <button className="font-b">Dummy Name</button></span>
       </div>
       <div>
         <i className="far fa-address-book icon"></i>

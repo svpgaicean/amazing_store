@@ -5,9 +5,9 @@ const ContentDescription = () => {
   return (
 		<div className="description">
 			<ul>
-				<li>BRAND: <a href="#" className="font-b">Dummy Name</a></li>
-				<li>SKIN TYPE: <a href="#" className="font-b">Dummy Name</a></li>
-				<li>AGE: <a href="#" className="font-b">Dummy Name</a></li>
+				<li>BRAND: <button className="font-b">Dummy Name</button></li>
+				<li>SKIN TYPE: <button className="font-b">Dummy Name</button></li>
+				<li>AGE: <button className="font-b">Dummy Name</button></li>
 			</ul>
 		</div>
   )

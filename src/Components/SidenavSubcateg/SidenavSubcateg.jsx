@@ -1,15 +1,17 @@
 import React from 'react';
 import './SidenavSubcateg.css';
 
-const SidenavSubcateg = () => {
+const SidenavSubcateg = (props) => {
+	// const subcateg = Object.values(props.categories);
+	// const arr = subcateg.map( (subcateg, index) => {
+		// return <button className="categ">{subcateg}</button>
+	// })
+	// console.log(arr);
 	return (
 		<>
-			<div className="subcateg">name1</div>
-			<div className="subcateg">name2</div>
-			<div className="subcateg">name3</div>
-			<div className="subcateg">name4</div>
-			<div className="subcateg">name5</div>
-			<div className="subcateg">name6</div>
+			{/* {arr} */}
+			<div> Hello</div>
+			<div> World </div>
 		</>
 	)	
 }

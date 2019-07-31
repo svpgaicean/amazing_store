@@ -5,10 +5,10 @@ const Links = () => {
   return (
     <div className="links">
       <ul>
-        <li><a href="#">Shipping</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Company</a></li>
-        <li><a href="#">My account</a></li>
+        <li><button>Shipping</button></li>
+        <li><button>Blog</button></li>
+        <li><button>Company</button></li>
+        <li><button>My account</button></li>
       </ul>
     </div>
   )
