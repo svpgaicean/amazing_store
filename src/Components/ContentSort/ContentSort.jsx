@@ -3,7 +3,7 @@ import React from 'react';
 const ContentSort = () => {
   return (
 		<div className="sort">
-			SORT: <a href="#" className="font-b">Dummy Name</a>
+			SORT: <button className="font-b">Dummy Name</button>
 		</div>
   )
 }

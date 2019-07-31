@@ -34,6 +34,13 @@ code {
     monospace;
 }
 
+button {
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+}
+
 /* ---- container settings ---- */
 .container {
     display: flex;

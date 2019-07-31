@@ -6,6 +6,7 @@ import Contentnav from '../Contentnav/Contentnav';
 import ContentDescription from '../ContentDescription/ContentDescription';
 import ContentSort from '../ContentSort/ContentSort';
 import ContentProducts from '../ContentProducts/ContentProducts';
+import SidenavSubcateg from '../SidenavSubcateg/SidenavSubcateg';
 
 class Content extends React.Component {
 	constructor(props) {
@@ -19,7 +20,12 @@ class Content extends React.Component {
 				HAIR: ['l', 'm', 'n', 'o', 'p'],
 				MAKEUP: ['q', 'r', 's'],
 			},
+			toggle: 0,
 		}
+	}
+	
+	handleToggle = (catkey) => {
+		this.setState({toggle: catkey})
 	}
 
   render() {
@@ -28,9 +34,8 @@ class Content extends React.Component {
         <div className="container-left">
           <Sidenav
 						categories={this.state.categories}
-						disabled={false}
-						hidden={false}
-						title="All categories"
+						toggle={this.state.toggle}
+						handleToggle={this.handleToggle}
 					/>
 					<Advertisment />
         </div>
