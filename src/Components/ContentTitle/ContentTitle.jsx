@@ -1,10 +1,16 @@
 import React from 'react';
 import './ContentTitle.css';
 
-const ContentTitle = () => {
+const ContentTitle = (props) => {
+	const subcateg = Object.values(props.categories)[props.togglecat];
+	let title;
+
+	if (subcateg && typeof subcateg === 'object') {
+		title = Object.values(subcateg)[props.togglesubcat];
+	}
+
   return (
-		<div className="content-title">Creams and gels</div>
-		// text inside should be based on state
+		<div className="content-title">{title}</div>
 	)
 }
 
