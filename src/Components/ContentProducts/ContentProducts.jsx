@@ -1,57 +1,25 @@
 import React from 'react';
 import './ContentProducts.css';
-import Image from '../../Images/460095802.jpg'
 
-const ContentProducts = () => {
-  return (
-		<div className="flex-content">
-			<div className="item">
-				<img src={Image} className="item-img" alt="item-img"></img>
-				<div className="item-name">Dummy Name</div>
-				<div className="item-price">Dummy Price $</div>
+/* currently maps to "All Categories"
+	implementation needs to handle mapping for specific Categories/Subcategories
+	*/
+const ContentProducts = (props) => {
+		const items = props.products && props.products.map( (product) => {
+		return (
+			<div key={product.id} className="item">
+				<img src={product.img} className="item-img" alt="item-img" />
+				<div className="item-name">{product.name}</div>
+				<div className="item-price">{product.price}</div>
 			</div>
-			<div className="item">
-				<img src={Image} className="item-img" alt="item-img"></img>
-				<div className="item-name">Dummy Name</div>
-				<div className="item-price">Dummy Price $</div>
+			)
+		})
+
+		return (
+			<div className="flex-content">
+				{items}
 			</div>
-			<div className="item">
-				<img src={Image} className="item-img" alt="item-img"></img>
-				<div className="item-name">Dummy Name</div>
-				<div className="item-price">Dummy Price $</div>
-			</div>
-			<div className="item">
-				<img src={Image} className="item-img" alt="item-img"></img>
-				<div className="item-name">Dummy Name</div>
-				<div className="item-price">Dummy Price $</div>
-			</div>
-			<div className="item">
-				<img src={Image} className="item-img" alt="item-img"></img>
-				<div className="item-name">Dummy Name</div>
-				<div className="item-price">Dummy Price $</div>
-			</div>
-			<div className="item">
-				<img src={Image} className="item-img" alt="item-img"></img>
-				<div className="item-name">Dummy Name</div>
-				<div className="item-price">Dummy Price $</div>
-			</div>
-			<div className="item">
-				<img src={Image} className="item-img" alt="item-img"></img>
-				<div className="item-name">Dummy Name</div>
-				<div className="item-price">Dummy Price $</div>
-			</div>
-			<div className="item">
-				<img src={Image} className="item-img" alt="item-img"></img>
-				<div className="item-name">Dummy Name</div>
-				<div className="item-price">Dummy Price $</div>
-			</div>
-			<div className="item">
-				<img src={Image} className="item-img" alt="item-img"></img>
-				<div className="item-name">Dummy Name</div>
-				<div className="item-price">Dummy Price $</div>
-			</div>
-		</div>
-  )
+		)
 }
 
 export default ContentProducts;

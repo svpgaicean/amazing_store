@@ -21,13 +21,21 @@ class Content extends React.Component {
 			},
 			togglecat: -1,
 			togglesubcat: -1,
+			products: null,
 		}
+	}
+
+	componentWillMount = async() => {
+		const url = "https://api.myjson.com/bins/x1twd";
+		const response = await fetch(url);
+		const products = await response.json();
+		this.setState({products});
 	}
 	
 	handleToggleCat = (catkey) => {
 		this.setState({
 			togglecat: catkey,
-			togglesubcat: -1
+			togglesubcat: -1,
 		});
 	}
 
@@ -62,7 +70,9 @@ class Content extends React.Component {
 					</div>
 					<hr />
 					<div className="flex-content">
-						<ContentProducts />
+						<ContentProducts
+							products={this.state.products}
+						/>
 					</div>
         </div>
       </div>
