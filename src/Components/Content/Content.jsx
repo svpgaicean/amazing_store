@@ -6,7 +6,6 @@ import Contentnav from '../Contentnav/Contentnav';
 import ContentDescription from '../ContentDescription/ContentDescription';
 import ContentSort from '../ContentSort/ContentSort';
 import ContentProducts from '../ContentProducts/ContentProducts';
-import SidenavSubcateg from '../SidenavSubcateg/SidenavSubcateg';
 
 class Content extends React.Component {
 	constructor(props) {

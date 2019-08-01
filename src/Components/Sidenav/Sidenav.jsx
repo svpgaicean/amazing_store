@@ -13,14 +13,11 @@ const Sidenav = (props) => {
 			<div key={catkey} className="categ" onClick={() => props.handleToggle(catkey)}>{category} 
 			{
 				props.toggle !== 0 && props.toggle === catkey &&
-				<>
-					{subcategories[index].map( (subcateg, i) => {
-						let subcatkey = Number((index + 1) + '' + i);
-						return (
-							<div key={subcatkey} className="subcateg">{subcateg}</div>
-						)
-				})}
-				</>	
+				<SidenavSubcateg
+					catkey={catkey}
+					subcategories={subcategories[index]}
+					toggle={props.toggle}
+				/>
 			}
 			</div>
 		)
