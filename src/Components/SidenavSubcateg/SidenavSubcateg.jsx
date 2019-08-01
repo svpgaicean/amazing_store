@@ -2,18 +2,28 @@ import React from 'react';
 import './SidenavSubcateg.css';
 
 const SidenavSubcateg = (props) => {
-	// const subcateg = Object.values(props.categories);
-	// const arr = subcateg.map( (subcateg, index) => {
-		// return <button className="categ">{subcateg}</button>
-	// })
-	// console.log(arr);
+	const subcategories = props.subcategories;
+	
+	const subcateg = subcategories.map( (subcateg, i) => {
+	let subcatkey = Number(props.catkey + '' + i);
+		return (
+			<div
+				key={subcatkey}
+				className="subcateg"
+				onClick={(e) => {
+					props.handleToggleSubcat(i)
+					e.stopPropagation();
+				}
+				}>
+				{subcateg}
+				</div>
+		)
+	})
+
 	return (
-		<>
-			{/* {arr} */}
-			<div> Hello</div>
-			<div> World </div>
-		</>
-	)	
+		<>{subcateg}</>
+	)
+
 }
 
 export default SidenavSubcateg;
