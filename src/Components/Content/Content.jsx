@@ -11,25 +11,20 @@ class Content extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			categories: {
-				FACE: ['aaaa', 'bbbbb', 'cccc', 'dddd'],
-				BODY: ['eeeee', 'ffff', 'gggggg'],
-				FOOT: ['fooooooth', 'fooooti'],
-				HANDS: ['jhaaaaands', 'khaaaands'],
-				HAIR: ['lhaa', 'mhaa', 'nhaa', 'ohaa', 'phaaa'],
-				MAKEUP: ['qmkp', 'rmkp', 'smkp'],
-			},
+			categories: [],
+			products: [], 
 			togglecat: -1,
-			togglesubcat: -1,
-			products: null,
+			togglesubcat: -1
 		}
 	}
 
 	componentWillMount = async() => {
-		const url = "https://api.myjson.com/bins/x1twd";
-		const response = await fetch(url);
+		let response;
+		response = await fetch('/products');
 		const products = await response.json();
-		this.setState({products});
+		response = await fetch('/categories');
+		const categories = await response.json();
+		this.setState({products: products.data, categories: categories.data});
 	}
 	
 	handleToggleCat = (catkey) => {
@@ -70,9 +65,7 @@ class Content extends React.Component {
 					</div>
 					<hr />
 					<div className="flex-content">
-						<ContentProducts
-							products={this.state.products}
-						/>
+						<ContentProducts products={this.state.products} />
 					</div>
         </div>
       </div>
