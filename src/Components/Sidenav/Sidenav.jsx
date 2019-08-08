@@ -3,8 +3,18 @@ import './Sidenav.css';
 import SidenavSubcateg from '../SidenavSubcateg/SidenavSubcateg';
 
 const Sidenav = (props) => {
-	const categories = Object.keys(props.categories);	
-	const subcategories = Object.values(props.categories);
+	const categories = props.categories.map(category => category.name);
+	const subcategories = props.categories.map(item => item.subcategories);
+
+	let subcatnames = [];
+	for (let i = 0; i < subcategories.length; i++) {
+		let currentarr = subcategories[i];
+		let newarr = [];
+		for (let j = 0; j < currentarr.length; j++) {
+			newarr.push(currentarr[j].name);
+		}
+		subcatnames.push(newarr);
+	}
 
 	const categ = categories.map( (category, index) => {
 		return (
@@ -13,7 +23,7 @@ const Sidenav = (props) => {
 				props.togglecat === index &&
 				<SidenavSubcateg
 					catkey={index}
-					subcategories={subcategories[index]}
+					subcategories={subcatnames[index]}
 					togglesubcat={props.togglesubcat}
 					handleToggleSubcat={props.handleToggleSubcat}
 				/>
